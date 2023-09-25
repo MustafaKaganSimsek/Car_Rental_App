@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  spring:
+    container_name: gogo
+    image: gogo
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresqldb_
+  postgresqldb_:
+    image: postgres
+    ports:
+      - "5436:5436"
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=gogo
+
+
