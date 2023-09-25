@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg px-3 navbar-light bg-white border-bottom">
+    <div class="container-fluid row-cols-lg-1">
+      <a class="navbar-brand col-lg-2 ms-5 text-center" href="#">GOGO</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse pe-lg-5 d-lg-flex col-lg-10" id="navbarSupportedContent">
+        <ul class="navbar-nav d-flex align-items-center me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/cars">Cars</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/contact">Contact</a>
+          </li> -->
+        </ul>
+        <ul *ngIf="!loggedIn()" class="navbar-nav text-decoration-none d-flex align-items-center me-lg-5">
+          <li>
+            <button (click)="loginPage()" class="btn shadow-none ms-lg-2 border-1" id="sign-in">Log In</button> 
+          </li>
+          <li>
+            <button (click)="signUpPage()" class="btn btn-dark shadow-none me-lg-2" id="sign-up">Sign up</button>
+          </li>
+        </ul>
+        <ul *ngIf="loggedIn()" class="navbar-nav text-decoration-none d-flex align-items-center me-lg-5">
+      
+          <li>
+            <div class="dropdown">
+              <button class="btn shadow-none ms-lg-2 border-1 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                {{user?.name}}
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a (click)="logOut()" class="dropdown-item" routerLink="/home">Log Out</a></li>
+                <li><a class="dropdown-item" routerLink="/reservations">Reservations</a></li>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>             
+      </div>
+     
+    </div> 
+        
+      
+  </nav>

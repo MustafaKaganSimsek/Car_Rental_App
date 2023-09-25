@@ -1,0 +1,30 @@
+<navbar></navbar>
+<div class="container " >
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">brand</th>
+          <th scope="col">model</th>
+          <th scope="col">name</th>
+          <th scope="col">day</th>
+          <th scope="col">price</th>
+  
+          <!-- <th scope="col"><a class="btn btn-danger" href="" >Delete All</a></th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resevation of reservations">
+          <th scope="row">{{resevation.id}}</th>
+          <td>{{resevation.car?.brand}}</td>
+          <td>{{resevation.car?.model}}</td>
+          <td>{{resevation.account?.name}}</td>
+          <td>{{resevation.day | date}}</td>
+          <td>{{resevation.car?.priceDay}}$</td> 
+          <td><span class="btn btn-danger ms-1"(click)="deleteReservation(resevation)">Cancel</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <app-footer></app-footer>
+

@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <span class="btn btn-primary" routerLink="add">Add</span>
+  <span class="btn btn-primary ms-2" (click)="isActive()" ><span *ngIf="active">Only Actives</span><span *ngIf="!active">Show Inactives</span></span>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Model</th>
+        <th scope="col">Price-Hour</th>
+        <th scope="col">Price-Day</th>
+        <th scope="col">Price-Month</th>
+        <th scope="col">Active</th>
+        <th scope="col"><a class="btn btn-danger" href="" >Delete All</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars">
+        <th scope="row">{{car.id}}</th>
+        <td>{{car.brand}}</td>
+        <td>{{car.model}}</td>
+        <td>{{car.priceHour}}</td>
+        <td>{{car.priceDay}}</td>
+        <td>{{car.priceMonth}}</td>
+        <td>{{car.active}}</td>
+        <td>
+          <!-- <a class="btn btn-warning" href="">edit/details</a>  -->
+          <span class="btn btn-danger ms-1"(click)="deleteCar(car)">Delete</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
