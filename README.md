@@ -1,6 +1,4 @@
 # Car_Rental_App
- Patika.dev DefineX Java Spring Practicum Final Case
-
 
 ## About Project
 API that allows the car rental company to make appointments for vehicles to be rented.
