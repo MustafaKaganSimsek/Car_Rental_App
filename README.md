@@ -27,7 +27,7 @@ cd .../Car_Rental_App/gogo
 ```
 docker-compose up
 ```
-3. You can use swagger or frontend app
+3. You can use swagger 
 
 * Swagger -> http://localhost:8080/swagger-ui/index.html
 
