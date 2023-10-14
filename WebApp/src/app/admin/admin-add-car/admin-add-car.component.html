@@ -1,0 +1,33 @@
+<section id="adding-form" class="container mt-5">
+    <form class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Marka</label>
+            <input #brand type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Model</label>
+            <input #model type="text" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-md-4">
+            <label for="inputPassword4" class="form-label">Günlük Ücret</label>
+            <input #priceDay type="text" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-md-6">
+            <label for="inputAddress" class="form-label">Yakıt</label>
+            <select #fuel id="inputState" class="form-select">
+                <option selected value="benzinli">Benzinli</option>
+                <option value="dizel">Dizel</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="inputAddress2" class="form-label">Vites</label>
+            <select #gear id="inputState" class="form-select">
+                <option selected value="manuel">Manuel</option>
+                <option value="otomatik">Otomatik</option>
+            </select>
+        </div>
+        <div class="col-12">
+        <button (click)="add(brand.value,model.value,priceDay.value,gear.value,fuel.value)" type="submit" class="btn btn-primary">Kaydet</button>
+        </div>
+    </form>
+</section>

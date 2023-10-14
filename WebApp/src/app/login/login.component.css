@@ -1,0 +1,11 @@
+#login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+#login-form .tab-content{
+    width: 250px;
+    height: 300px;
+}

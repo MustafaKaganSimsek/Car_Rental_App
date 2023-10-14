@@ -1,6 +1,8 @@
 FROM maven:3.8.2-adoptopenjdk-11
 
-COPY . .
+WORKDIR /gogo
+
+COPY . /gogo
 
 RUN mvn clean install
 

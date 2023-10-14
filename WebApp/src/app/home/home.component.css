@@ -1,0 +1,139 @@
+#home{
+    padding-top: 54px;
+}
+
+/* nasıl işler*/
+
+#intro-items{
+    display: flex;
+    justify-content: space-between;
+}
+#intro h1{
+    text-align: center;
+}
+.intro-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    width: 250px;
+    height: 250px;    
+}
+.intro-arrow{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: #2275fe;
+}
+.icon-box-odd{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    font-size: 30px;
+    color: #2275fe;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+}
+.icon-box-even{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    color: white;
+    font-size: 30px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: #2275fe;
+}
+.icon-box-odd i{
+    font-size: 30px;
+    color: #2275fe;
+}
+.icon-box-even i{
+    font-size: 30px;
+    color: #ffffff;
+}
+
+/*trends*/
+#trend-cars{
+    background-color: #f1f2f6;
+}
+
+#trend-cars h1{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 75px;
+    
+}
+.main-img{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(
+        to bottom , 
+        #f1f2f6 0%, 
+        #f1f2f6 50%, 
+        #ffffff 50%, 
+        #ffffff 100%
+      );
+}
+
+/*oto galery*/
+#galery{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#galery h1{
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.galery-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+#galery>button{
+    width: 100%;
+    background-color: #2275fe ;
+    border: none;
+    border-radius: 0;
+    padding: 2rem;
+    font-size: 1.4rem;
+    color: white;
+}
+.galery-box{
+   width: 50%;
+}
+.galery-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+    
+}
+@media screen and (max-width: 767px){
+    /*how it work*/
+    
+    #intro-items{
+        flex-direction: column;
+    }
+    .intro-arrow{
+        transform: rotate(90deg);
+    }
+
+    .galery-section{
+        flex-direction:column ;
+    }
+    .galery-box{
+        margin: 7rem 0 7rem 0;
+        width: 100%;
+        align-items: center;
+    }
+}

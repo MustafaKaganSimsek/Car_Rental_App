@@ -4,18 +4,25 @@ services:
   spring:
     container_name: gogo
     image: gogo
-    build: ./
+    build: ./gogo/
     ports:
       - "8080:8080"
     depends_on:
       - postgresqldb_
+  angular:
+      container_name: WebApp-docker-container
+      build: ./WebApp/
+      ports:
+        - '4200:80'
   postgresqldb_:
     image: postgres
     ports:
-      - "5436:5436"
+      - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=admin
       - POSTGRES_USER=postgres
       - POSTGRES_DB=gogo
+
+
 
 
